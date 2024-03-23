@@ -12,10 +12,13 @@ const App = () => {
 
   useEffect(() => {
     const getUser = () => {
-      fetch("https://krypt-task1-backend.onrender.com/auth/login/success", {
+      fetch("https://krypt-task1-backend.onrender.com/auth/login/success",  {
         method: "GET",
+        credentials: "include",
         headers: {
+          Accept: "application/json",
           "Content-Type": "application/json",
+          "Access-Control-Allow-Credentials": true,
         },
       })
         .then((response) => {
